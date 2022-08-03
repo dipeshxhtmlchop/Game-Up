@@ -143,6 +143,9 @@
             width: 100%;
             margin: 0 auto;
             min-height: 271px;
+            @media screen and (min-device-width: 1024px) and (max-device-width: 1399px) { 
+                min-height: 300px;
+             }
         }
         .card-title {
             img {
@@ -161,6 +164,11 @@
                 text-align: center;
                 letter-spacing: 0.045em;
                 text-transform: uppercase;
+            }
+        }
+        .cover-img-card {
+            img {
+                flex: 1 1 100%;
             }
         }
     }
@@ -685,4 +693,11 @@
             width: 50% !important;
         }
     }
+    .slick-track {
+        @media screen and (min-device-width: 1024px) and (max-device-width: 1399px) { 
+            display: flex;
+            gap: 10px;
+            padding-bottom: 10px;
+         }
+        }
 }

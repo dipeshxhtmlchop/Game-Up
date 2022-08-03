@@ -60,7 +60,7 @@ export default function SlickSlider() {
                     </Card>
                 </div>
                 <div className="slider-cards">
-                    <Card style={{ alignItems: 'center', border: 'none' }}>
+                    <Card className="cover-img-card" style={{ alignItems: 'center', border: 'none' }}>
                         <img className="w-100" src={playersImage} alt="players_img" />
                     </Card>
                 </div>
@@ -83,7 +83,7 @@ export default function SlickSlider() {
                     </Card>
                 </div>
                 <div className="slider-cards">
-                    <Card style={{ alignItems: 'center', border: 'none' }}>
+                    <Card className="cover-img-card" style={{ alignItems: 'center', border: 'none' }}>
                         <img className="w-100" src={playersImage} alt="players_img" />
                     </Card>
                 </div>
