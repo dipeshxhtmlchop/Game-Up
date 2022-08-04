@@ -88,13 +88,13 @@ export default function QueryForm() {
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative">
-                            <h2 className="text-start">Travel Teams</h2>
+                            <h2 className="text-center text-md-start">Travel Teams</h2>
                         </Col>
                         <Col md={12} className="results-slider-section">
                             <ResultsSlider cardsData={cardsData} />
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
-                            <h2 className="text-start">Skills Trainers</h2>
+                            <h2 className="text-center text-md-start">Skills Trainers</h2>
                         </Col>
                         <Col md={12} className="results-slider-section">
                             <ResultsSlider cardsData={cardsData2} />

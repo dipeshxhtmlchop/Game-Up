@@ -18,6 +18,9 @@
             font-weight: 700;
             color: #fff;
             text-decoration: none;
+            @media(max-width: 991px) {
+                font-size: 30px;
+            }
         }
         .login-btn {
             border: 3px solid #FFFFFF;
@@ -158,12 +161,20 @@
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 157.5%;
+                @media(max-width: 767px) {
+                    font-size: 16px;
+                }
+                @media(max-width: 400px) {
+                    font-size: 15px;
+                }
             }
             p {
                 color: #FF8E15;
                 text-align: center;
                 letter-spacing: 0.045em;
                 text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
             }
         }
         .cover-img-card {
@@ -191,7 +202,9 @@
         background-image: url(../images/forms/login-bg.png);
         background-size: cover;
         background-repeat: no-repeat;
-        // height: calc(100vh - 143px);
+        @media(max-width: 991px) {
+            background: none;
+        }
         .login-form, .registration-form {
             background: #F0F2F5;
             box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
@@ -392,7 +405,13 @@
             left: 0;
             bottom: -126px;
             @media(max-width: 991px) {
-                background-size: cover;
+                background-size: 100% 100%;
+                background-image: url(../images/forms/lets-find-bg-sm.png);
+            }
+            @media(max-width: 767px) {
+                flex-direction: column;
+                max-width: 330px;
+                bottom: -170px;
             }
             p {
                 color: #fff;
@@ -410,11 +429,16 @@
                 font-size: 24px;
                 line-height: 135%;
                 max-width: 370px;
+                @media(max-width: 767px) {
+                    max-width: 230px;
+                    width: 100%;
+                }
             }
         }
     }
     .results-page {
         background-image: url(../images/backgrounds/results-bg.png);
+        background-size: cover;
     }
     .results-page-description {
         h2 {
@@ -425,6 +449,10 @@
             text-transform: uppercase;
             border-bottom: 1px solid #D9D9D6;
             padding-bottom: 35px;
+            @media(max-width: 767px) {
+                font-size: 30px;
+                padding-bottom: 16px;
+            }
 
         }
         .slider-cards {
@@ -475,6 +503,9 @@
                 text-align: center;
                 color: #000000;
                 text-transform: initial;
+                @media(max-width: 1199px) and (min-width: 1024px) {
+                    font-size: 15px;
+                }
             }
             .card-title {
                 margin: 0;
@@ -483,7 +514,7 @@
     }
     .results-slider-outer {
         .slick-list {
-            padding-top: 60px;
+            padding-top: 60px !important;
             padding-left: 0;
             .slider-cards {
                 outline: none;
@@ -492,12 +523,38 @@
         &.slick-slider {
             margin-top: 0;
             .slick-next {
-                right: 0;
+                right: -12px;
                 top: 50%;
+                @media (max-width: 1024px) {
+                    right: 47%;
+                    top: auto;
+                }
+                @media (max-width: 767px) {
+                    right: 47%;
+                }
+                @media(max-width: 480px) {
+                    right: 46%;
+                }
+                @media(max-width: 380px) {
+                    right: 45%;
+                }
             }
             .slick-prev {
-                left: -70px;
+                left: -65px;
                 top: 50%;
+                @media (max-width: 1024px) {
+                    left: 42%;
+                    top: auto;
+                }
+                @media (max-width: 767px) {
+                    left: 35%;
+                }
+                @media(max-width: 480px) {
+                    left: 33%;
+                }
+                @media(max-width: 380px) {
+                    left: 30%;
+                }
             }
         }
     }
@@ -505,6 +562,9 @@
         margin-bottom: 120px;
         .slick-disabled {
             display: none !important;
+            @media (max-width: 1024px) {
+                display: block !important;
+            }
         }
     }
     .about-page-banner {
@@ -580,11 +640,14 @@
         
     }
     .slick-slide {
-        @media(max-width: 1399px) {
-            // margin: 0 5px;
+        @media(max-width: 767px) {
+            margin: 0 10px;
         }
     }
     .profile-banner-section {
+        @media(max-width: 767px) {
+            flex-direction: column;
+        }
         img {
             max-width: 200px;
             width: 100%;
@@ -598,21 +661,31 @@
                 text-transform: uppercase;
                 color: #FFFFFF;
                 border-bottom: 2px solid #ffffff30;
+                @media(max-width: 767px) {
+                    font-size: 50px;
+                }
             }
-            p:nth-child(2) {
-                font-weight: 500;
-                font-size: 24px;
-                line-height: 36px;
-                color: #FFFFFF;
-            }
-            p:nth-child(3) {
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 36px;
-                text-align: center;
-                text-decoration-line: underline;
-                color: #FFFFFF;
-            }
+                .location-ny {
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: #FFFFFF;
+                    padding-left: 35px;
+                    @media(max-width: 767px) {
+                        font-size: 20px;
+                    }
+                }
+                .location-url {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 36px;
+                    text-align: center;
+                    text-decoration-line: underline;
+                    color: #FFFFFF;
+                    @media(max-width: 767px) {
+                        font-size: 20px;
+                    }
+                }
         }
     }
     .profile-cards {
@@ -694,10 +767,137 @@
         }
     }
     .slick-track {
-        @media screen and (min-device-width: 1024px) and (max-device-width: 1399px) { 
+        @media(max-width: 1399px) { 
             display: flex;
             gap: 10px;
             padding-bottom: 10px;
          }
+        }
+        .heading-with-icons {
+            @media(max-width: 991px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                position: absolute;
+                left: 10px;
+                top: 4px;
+                max-width: 42px;
+                @media(max-width: 991px) {
+                    position: static;
+                }
+            }
+            h2 {
+                padding-left: 60px;
+                @media(max-width: 991px) {
+                    padding: 0;
+                    width: 100%;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .location-details {
+            img {
+                max-width: 20px;
+                width: 100%;
+                top: 26px;
+            }
+        }
+        .make-recommendation {
+            background-image: url(../images/backgrounds/make-recommendation-bg.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            max-width: 410px;
+            width: 100%;
+            position: absolute;
+            right: 50px;
+            top: 30px;
+            gap: 20px;
+            p {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 27px;
+                letter-spacing: 0.045em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+            img {
+                max-width: 28px;
+                width: 100%;
+            }
+        }
+        .current-info-icon {
+            top: 53px !important;
+        }
+        .navbar-toggler {
+            outline: none;
+            box-shadow: none;
+            border: 0;
+        }
+        .navbar-toggler-icon {
+            background-image: url(../images/icons/nav-bars-icon.png);
+            background-size: 20px;
+       }
+        .nav-active-custom {
+            display: flex;
+            align-items: flex-start;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            z-index: 9999;
+            left: 0;
+            right: 0;
+            padding-top: 16px;
+            .navbar-toggler-icon {
+                background-image: url(../images/icons/cross-icon.png);
+            }
+            .navbar-nav {
+                padding-top: 50%;
+                gap: 32px;
+            }
+        }
+        .login-signup {
+            @media(max-width: 991px) {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                max-width: 295px;
+                width: 100%;
+            }
+            .joingame-btn {
+                @media(max-width: 991px) {
+                    margin: 0 !important;
+                }
+            }
+        }
+        .query-page-outer {
+            @media(max-width: 991px) {
+                background-image: url(../images/backgrounds/query-bg-sm.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .form-inputs {
+                @media(max-width: 767px) {
+                    padding-top: 110px !important;
+                    margin-top: -114px;
+                }
+            }
+        }
+        .profile-mobile-slider {
+            .slick-list {
+                padding-top: 0 !important;
+            }
+            .slider-cards {
+                &.col-md-12 {
+                    padding-top: 0 !important;
+                }                    
+            }
+            .results-slider-outer {
+                margin-bottom: 80px;
+                @media(max-width: 767px) {
+                    margin-bottom: 80px !important;
+                }
+            }
         }
 }

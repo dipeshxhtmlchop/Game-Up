@@ -13,7 +13,51 @@ export default function ResultsSlider(props) {
         infinite: false,
         speed: 500,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                centerMode: true,
+                centerPadding: '30px',
+              }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: false,
+                  centerMode: true,
+                  centerPadding: '30px',
+                }
+              },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '30px',
+              }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    infinite: true,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                  }
+              }
+          ]
     };
     return (
         <>

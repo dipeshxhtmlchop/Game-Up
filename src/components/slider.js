@@ -44,7 +44,16 @@ export default function SlickSlider() {
                 centerMode: true,
                 centerPadding: '30px',
               }
-            }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                  }
+              }
           ]
     };
     return (

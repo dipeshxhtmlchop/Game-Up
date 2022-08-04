@@ -4,8 +4,9 @@ import Ball from '../assets/images/player-dash/ball.png'
 import Cup from '../assets/images/player-dash/cup.png'
 import Court from '../assets/images/player-dash/court.png'
 import Cards from '../components/cards'
-
-
+import ForYouIcon from '../assets/images/icons/for-you-icon.png'
+import BadgesIcon from '../assets/images/icons/badges-icon.png'
+import CurrentInfoIcon from '../assets/images/icons/current-info-icon.png'
 
 export default function PlayerDash() {
     const cardsData = [
@@ -50,8 +51,9 @@ export default function PlayerDash() {
             <div className="py-5 my-5 profile-cards">
                 <Container>
                     <Row>
-                        <Col md={12} className="results-page-description position-relative">
-                            <h2 className="text-start">Players</h2>
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={ForYouIcon} alt="ForYouIcon" />
+                            <h2 className="text-start">for you this week</h2>
                         </Col>
                         {cardsData.map((items, idx) => {
                             return (
@@ -76,13 +78,15 @@ export default function PlayerDash() {
             <div className="py-5 my-5 badges-outer">
                 <Container>
                     <Row>
-                        <Col md={12} className="results-page-description position-relative">
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={BadgesIcon} alt="BadgesIcon" />
                             <h2 className="text-start">Badges & Awards</h2>
                         </Col>
                         <Col md={12} className="py-3">
                             <h2 className="text-center no-badge py-5">No badges or awards have been added.</h2>
                         </Col>
-                        <Col md={12} className="results-page-description position-relative pt-5">
+                        <Col md={12} className="results-page-description position-relative pt-5 heading-with-icons">
+                            <img src={CurrentInfoIcon} alt="CurrentInfoIcon" className="current-info-icon" />
                             <h2 className="text-start">Current info</h2>
                         </Col>
                         <Col md={12} className="current-info py-3">

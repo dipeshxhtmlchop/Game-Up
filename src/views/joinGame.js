@@ -1,4 +1,5 @@
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
+import PremiumIcon from '../assets/images/icons/premium-icon.png'
 
 export default function JoinGame() {
     return (
@@ -84,7 +85,7 @@ export default function JoinGame() {
                                         </Col>
                                         <Col md={6} sm={12} className="mb-3 px-md-4 px-4 select-plans">
                                             <div className="select-plan-section plan-cards py-5 px-4">
-                                                <h2 className="text-center">Premium</h2>
+                                                <h2 className="text-center"><img src={PremiumIcon} alt="PremiumIcon" className="me-2 mb-2" style={{ maxWidth: '20px', width: '100%' }} />Premium</h2>
                                                 <hr></hr>
                                                 <ul>
                                                     <li>Benefit</li>

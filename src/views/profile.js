@@ -6,6 +6,10 @@ import playerThree from '../assets/images/travel-teams/player3.png'
 import founderImage from '../assets/images/about-cards/founder.png'
 import AddCardImg from '../assets/images/about-cards/add-card.png'
 import Cards from '../components/cards'
+import PlayersIcon from '../assets/images/icons/players-icon.png'
+import RecommendationIcon from '../assets/images/icons/recommendation-icon.png'
+import LocationIcon from '../assets/images/icons/location-icon.png'
+import ResultsSlider from "../components/resultsSlider";
 
 
 export default function QueryForm() {
@@ -73,26 +77,34 @@ export default function QueryForm() {
     return (
         <>
             <div className="form-layouts py-5 results-page">
-                <Container>
-                    <Row className="profile-banner-section align-items-center">
+                <Container className="py-1">
+                    <Row className="profile-banner-section align-items-center py-5">
                         <Col md={2} xs={2} className="me-md-0 me-3">
                             <img src={founderImage} alt="founderImage" />
                         </Col>
                         <Col md={8} xs={8} className="text-start ms-3 pt-2 banner-content">
-                            <h1>Crystal McCrary</h1>
-                            <p className="d-inline-block pe-3">New York, NY.</p>
-                            <p className="d-inline-block px-3">@crystal.mccary</p>
+                            <h1 className="pb-3">Crystal McCrary</h1>
+                            <div className="pt-4 location-details position-relative">
+                                <img src={LocationIcon} alt="LocationIcon" className="position-absolute" />
+                                <p className="d-inline-block pe-3 location-ny">New York, NY.</p>
+                                <p className="d-inline-block px-3 location-url">@crystal.mccary</p>
+                            </div>
                         </Col>
-                        <Col className="text-start pt-2 d-md-none d-flex">
-                            <p>Info on Little Ballers, etc.</p>
+                    </Row>
+                    <Row className="position-relative">
+                        <Col>
+                            <span className="make-recommendation d-flex align-items-center justify-content-center py-3">
+                                <img src={RecommendationIcon} alt="RecommendationIcon" />
+                                <p className="m-0">Make a recommendation</p></span>
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <div className="py-5 my-5 profile-cards">
+            <div className="py-5 my-5 profile-cards d-lg-block d-none">
                 <Container>
                     <Row>
-                        <Col md={12} className="results-page-description position-relative">
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={PlayersIcon} alt="PlayersIcon" />
                             <h2 className="text-start">Players</h2>
                         </Col>
                         {cardsData.map((items, idx) => {
@@ -113,14 +125,30 @@ export default function QueryForm() {
                     </Row>
                 </Container>
             </div>
-            <div className="py-5 my-5 profile-cards">
+
+            <div className="py-5 my-5 profile-cards d-lg-none d-block profile-mobile-slider">
                 <Container>
                     <Row>
-                        <Col md={12} className="results-page-description position-relative">
-                            <h2 className="text-start">recommendations</h2>
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={PlayersIcon} alt="PlayersIcon" />
+                            <h2 className="text-center text-lg-start">Players</h2>
+                        </Col>
+                        <Col md={12} className="slider-cards">
+                            <ResultsSlider cardsData={cardsData} />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+            <div className="py-5 my-5 profile-cards d-lg-block d-none">
+                <Container>
+                    <Row>
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={RecommendationIcon} alt="RecommendationIcon" />
+                            <h2 className="text-center text-lg-start">recommendations</h2>
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
-                            <h4 className="text-start pt-5">Pre-School Programs</h4>
+                            <h4 className="text-center text-lg-start pt-5">Pre-School Programs</h4>
                         </Col>
                         {cardsData2.map((items, idx) => {
                             return (
@@ -130,7 +158,7 @@ export default function QueryForm() {
                             )
                         })}
                         <Col md={12} className="results-page-description position-relative">
-                            <h4 className="text-start pt-5">Developmental programs</h4>
+                            <h4 className="text-center text-lg-start pt-5">Developmental programs</h4>
                         </Col>
                         {cardsData3.map((items, idx) => {
                             return (
@@ -139,6 +167,38 @@ export default function QueryForm() {
                                 </Col>
                             )
                         })}
+                        <Col md={12} className="results-page-description position-relative">
+                            <h4 className="text-start pt-5">Basketball facilities</h4>
+                        </Col>
+                        <Col md={12} className="results-page-description position-relative">
+                            <h4 className="text-start pt-5">AAU Teams</h4>
+                        </Col>
+                        <Col md={12} className="results-page-description position-relative">
+                            <h4 className="text-start pt-5">Summar camps</h4>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+
+            <div className="py-5 my-5 profile-cards d-lg-none d-block profile-mobile-slider">
+                <Container>
+                    <Row>
+                        <Col md={12} className="results-page-description position-relative heading-with-icons">
+                            <img src={RecommendationIcon} alt="RecommendationIcon" />
+                            <h2 className="text-center text-lg-start">recommendations</h2>
+                        </Col>
+                        <Col md={12} className="results-page-description position-relative">
+                            <h4 className="text-center text-lg-start pt-5">Pre-School Programs</h4>
+                        </Col>
+                        <Col md={12} className="slider-cards">
+                            <ResultsSlider cardsData={cardsData} />
+                        </Col>
+                        <Col md={12} className="results-page-description position-relative">
+                            <h4 className="text-center text-lg-start pt-5">Developmental programs</h4>
+                        </Col>
+                        <Col md={12} className="slider-cards">
+                            <ResultsSlider cardsData={cardsData} />
+                        </Col>
                         <Col md={12} className="results-page-description position-relative">
                             <h4 className="text-start pt-5">Basketball facilities</h4>
                         </Col>
