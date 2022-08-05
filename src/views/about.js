@@ -59,8 +59,8 @@ export default function About() {
                     <Col md={2} xs={2} className="me-md-0 me-3">
                         <img src={founderImage} alt="founderImage" />
                     </Col>
-                    <Col md={8} xs={8} className="text-start ms-3 pt-2">
-                        <h3>Founded by</h3>
+                    <Col md={8} xs={8} className="text-start ms-3 pt-2 ps-4 ps-md-0">
+                        <h3 className="mb-0 mb-md-2">Founded by</h3>
                         <h2>Crystal McCrary</h2>
                         <p className="d-md-block d-none">Info on Little Ballers, etc.</p>
                     </Col>

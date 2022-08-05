@@ -91,13 +91,13 @@ export default function QueryForm() {
                             <h2 className="text-center text-md-start">Travel Teams</h2>
                         </Col>
                         <Col md={12} className="results-slider-section">
-                            <ResultsSlider cardsData={cardsData} />
+                            <ResultsSlider cardsData={cardsData} cardType="team" />
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
                             <h2 className="text-center text-md-start">Skills Trainers</h2>
                         </Col>
                         <Col md={12} className="results-slider-section">
-                            <ResultsSlider cardsData={cardsData2} />
+                            <ResultsSlider cardsData={cardsData2} cardType="trainers" />
                         </Col>
                     </Row>
                 </Container>

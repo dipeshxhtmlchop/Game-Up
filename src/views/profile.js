@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import playerOne from '../assets/images/travel-teams/player1.png'
 import playerTwo from '../assets/images/travel-teams/player2.png'
@@ -10,6 +10,7 @@ import PlayersIcon from '../assets/images/icons/players-icon.png'
 import RecommendationIcon from '../assets/images/icons/recommendation-icon.png'
 import LocationIcon from '../assets/images/icons/location-icon.png'
 import ResultsSlider from "../components/resultsSlider";
+import MakeRecommendationModal from "../components/makeRecommendationModal";
 
 
 export default function QueryForm() {
@@ -74,16 +75,17 @@ export default function QueryForm() {
             image: playerTwo
         }
     ];
+    const [modalRecommendation, setModalRecommendation] = useState(false)
     return (
         <>
             <div className="form-layouts py-5 results-page">
                 <Container className="py-1">
                     <Row className="profile-banner-section align-items-center py-5">
-                        <Col md={2} xs={2} className="me-md-0 me-3">
+                        <Col xs={12} md={2} className="me-md-0 me-0">
                             <img src={founderImage} alt="founderImage" />
                         </Col>
-                        <Col md={8} xs={8} className="text-start ms-3 pt-2 banner-content">
-                            <h1 className="pb-3">Crystal McCrary</h1>
+                        <Col xs={12} md={8} className="text-center text-md-start ms-md-3 ms-0 pt-2 banner-content">
+                            <h1 className="pb-0 pb-md-3">Crystal McCrary</h1>
                             <div className="pt-4 location-details position-relative">
                                 <img src={LocationIcon} alt="LocationIcon" className="position-absolute" />
                                 <p className="d-inline-block pe-3 location-ny">New York, NY.</p>
@@ -91,9 +93,12 @@ export default function QueryForm() {
                             </div>
                         </Col>
                     </Row>
+                    {/* Modal */}
+                    <MakeRecommendationModal modalShow={modalRecommendation} onHide={() => setModalRecommendation(!modalRecommendation)} />
+                    {/*  */}
                     <Row className="position-relative">
                         <Col>
-                            <span className="make-recommendation d-flex align-items-center justify-content-center py-3">
+                            <span className="make-recommendation d-flex align-items-center justify-content-center py-3" onClick={() => setModalRecommendation(!modalRecommendation)}>
                                 <img src={RecommendationIcon} alt="RecommendationIcon" />
                                 <p className="m-0">Make a recommendation</p></span>
                         </Col>
@@ -200,13 +205,13 @@ export default function QueryForm() {
                             <ResultsSlider cardsData={cardsData} />
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
-                            <h4 className="text-start pt-5">Basketball facilities</h4>
+                            <h4 className="text-center text-lg-start pt-5">Basketball facilities</h4>
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
-                            <h4 className="text-start pt-5">AAU Teams</h4>
+                            <h4 className="text-center text-lg-start pt-5">AAU Teams</h4>
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
-                            <h4 className="text-start pt-5">Summar camps</h4>
+                            <h4 className="text-center text-lg-start pt-5">Summar camps</h4>
                         </Col>
                     </Row>
                 </Container>

@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import TeamNotPresentModal from "../components/teamNotPresentModal";
 
 export default function QueryForm() {
+    const [teamNotPresentModal, setTeamNotPresentModal] = useState(false)
     return (
         <>
             <div className="query-page-outer">
@@ -111,7 +114,10 @@ export default function QueryForm() {
                                                     <Form.Control type="text" placeholder="Search..." />
                                                 </Form.Group>
                                             </Col>
-                                            <Button variant="primary" type="submit" className="form-btn mt-4">
+                                            {/* Modal */}
+                                            <TeamNotPresentModal modalShow={teamNotPresentModal} />
+                                            {/*  */}
+                                            <Button variant="primary" type="submit" className="form-btn mt-4" onClick={(e) => { e.preventDefault(); setTeamNotPresentModal(!teamNotPresentModal) }}>
                                                 Let’s Go
                                             </Button>
                                         </Row>
