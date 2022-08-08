@@ -12,7 +12,9 @@ export default function Header() {
         setNavIcon(!navIcon)
     }
     const navItemsTrigger = () => {
-        document.getElementsByClassName('navbar-toggler')[0].click();
+        if (window.screen.width <= 991) {
+            document.getElementsByClassName('navbar-toggler')[0].click();
+        }
     }
     return (
         <>
