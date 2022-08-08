@@ -10,7 +10,9 @@ export default function Header() {
     const [navIcon, setNavIcon] = useState(false)
     const navIconToggle = () => {
         setNavIcon(!navIcon)
-        // console.log('-=-=-=-=-=-=-=', navIcon)
+    }
+    const navItemsTrigger = () => {
+        document.getElementsByClassName('navbar-toggler')[0].click();
     }
     return (
         <>
@@ -22,7 +24,7 @@ export default function Header() {
                         </Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={navIconToggle} />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto d-flex justify-content-between align-items-center w-100 px-5 text-uppercase">
+                            <Nav className="me-auto d-flex justify-content-between align-items-center w-100 px-5 text-uppercase" onClick={navItemsTrigger}>
                                 <div>
                                     <Link to="/about">About Us</Link>
                                 </div>
