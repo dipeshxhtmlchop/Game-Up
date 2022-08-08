@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from 'react-bootstrap/Card';
-import cardsDefaultImage from '../assets/images/slider/Vector.png'
+import cardsDefaultImage from '../assets/images/slider/Vector.svg'
 import playersImage from '../assets/images/slider/players-cards.png'
 
 export default function SlickSlider() {

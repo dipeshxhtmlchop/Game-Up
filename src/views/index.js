@@ -7,7 +7,8 @@ export default function IndexPage() {
     tabTitle('Home')
     return (
         <>
-            <div className="homepage-banner">
+            <div className="homepage-banner position-relative">
+                <div className="home-banner-overlay"></div>
                 <Container>
                     <Row>
                         <Col md={12} lg={6} className="text-white text-md-start text-center">
