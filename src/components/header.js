@@ -18,7 +18,7 @@ export default function Header() {
                 <Navbar bg="dark" expand="lg" className={navIcon ? 'nav-active-custom' : '' + 'py-3'}>
                     <Container>
                         <Link to="/">
-                            <img src={Logo} alt="Logo" />
+                            <img className="logo" src={Logo} alt="Logo" />
                         </Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={navIconToggle} />
                         <Navbar.Collapse id="basic-navbar-nav">

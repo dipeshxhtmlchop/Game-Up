@@ -1,7 +1,9 @@
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { tabTitle } from "../components/tabsTitle";
 
 export default function LoginPage() {
+    tabTitle('Login')
     return (
         <>
             <div className="login-page pb-5">
@@ -9,7 +11,7 @@ export default function LoginPage() {
                     <Row>
                         <Col md={12}>
                             <div className="forms">
-                                <h1 className="py-5 mt-5 mb-3">Login</h1>
+                                <h1 className="py-5 mt-0 mt-md-5 mb-3">Login</h1>
                                 <Form className="login-form">
                                     <Row className="form-inputs mx-auto py-5">
                                         <Col md={12}>

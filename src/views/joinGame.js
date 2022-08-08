@@ -1,7 +1,9 @@
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
-import PremiumIcon from '../assets/images/icons/premium-icon.png'
+import PremiumIcon from '../assets/images/icons/premium-icon.svg'
+import { tabTitle } from "../components/tabsTitle";
 
 export default function JoinGame() {
+    tabTitle('Registration')
     return (
         <>
             <div className="registration-page pb-5 form-layouts">
@@ -9,7 +11,7 @@ export default function JoinGame() {
                     <Row>
                         <Col md={12}>
                             <div className="forms">
-                                <h1 className="py-5 mt-5 mb-3">Welcome to GameUp</h1>
+                                <h1 className="py-5 mt-0 mt-md-5 mb-3">Welcome to GameUp</h1>
                                 <Form className="registration-form">
                                     <Row className="form-inputs mx-auto py-5">
                                         <Col md={6}>

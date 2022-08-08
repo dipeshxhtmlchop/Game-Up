@@ -4,8 +4,10 @@ import ResultsSlider from '../components/resultsSlider'
 import playerOne from '../assets/images/travel-teams/player1.png'
 import playerTwo from '../assets/images/travel-teams/player2.png'
 import playerThree from '../assets/images/travel-teams/player3.png'
+import { tabTitle } from "../components/tabsTitle";
 
 export default function QueryForm() {
+    tabTitle('Results')
     const cardsData = [
         {
             title: 'Team Name',

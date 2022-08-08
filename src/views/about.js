@@ -3,15 +3,17 @@ import AboutCardImg1 from '../assets/images/about-cards/aboutUs-card1.png'
 import AboutCardImg2 from '../assets/images/about-cards/aboutUs-card2.png'
 import AboutCardImg3 from '../assets/images/about-cards/aboutUs-card3.png'
 import founderImage from '../assets/images/about-cards/founder.png'
+import { tabTitle } from '../components/tabsTitle'
 
 export default function About() {
+    tabTitle('About Us')
     return (
         <>
-            <div className="py-5 about-page-banner">
+            <div className="pt-0 pt-md-5 pb-0 pb-md-5 about-page-banner">
                 <Container>
                     <Row>
-                        <Col md={12} className="position-relative py-3">
-                            <div className="forms py-3">
+                        <Col md={12} className="position-relative pt-0 pt-md-3 pb-3">
+                            <div className="forms pt-0 pt-md-3 pb-3">
                                 <h1 className="py-5">About Us</h1>
                             </div>
                         </Col>

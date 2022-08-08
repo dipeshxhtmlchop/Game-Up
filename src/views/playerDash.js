@@ -4,12 +4,14 @@ import Ball from '../assets/images/player-dash/ball.png'
 import Cup from '../assets/images/player-dash/cup.png'
 import Court from '../assets/images/player-dash/court.png'
 import Cards from '../components/cards'
-import ForYouIcon from '../assets/images/icons/for-you-icon.png'
-import BadgesIcon from '../assets/images/icons/badges-icon.png'
-import CurrentInfoIcon from '../assets/images/icons/current-info-icon.png'
+import ForYouIcon from '../assets/images/icons/for-you-icon.svg'
+import BadgesIcon from '../assets/images/icons/badges-icon.svg'
+import CurrentInfoIcon from '../assets/images/icons/current-info-icon.svg'
 import ResultsSlider from "../components/resultsSlider";
+import { tabTitle } from "../components/tabsTitle";
 
 export default function PlayerDash() {
+    tabTitle('Player Dashboard')
     const cardsData = [
         {
             title: 'Team Name',
@@ -29,8 +31,8 @@ export default function PlayerDash() {
             <div className="pt-md-5 pb-5 pt-0 about-page-banner player-dash">
                 <Container>
                     <Row>
-                        <Col md={12} className="position-relative py-3 query-page">
-                            <div className="forms py-3">
+                        <Col md={12} className="position-relative pt-3 pb-5 pt-md-3 pb-md-3 query-page">
+                            <div className="forms pt-3 pb-5 pt-md-3 pb-md-3">
                                 <h1 className="pt-md-5 pt-3 pb-5 px-md-0 px-5">Leo’s <span className="text-black">GameUp</span></h1>
                             </div>
                             <div className="lets-find mx-auto d-flex justify-content-center py-5 align-items-center position-absolute player-dash-search">

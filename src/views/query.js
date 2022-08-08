@@ -2,18 +2,20 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { tabTitle } from "../components/tabsTitle";
 import TeamNotPresentModal from "../components/teamNotPresentModal";
 
 export default function QueryForm() {
+    tabTitle('Query')
     const [teamNotPresentModal, setTeamNotPresentModal] = useState(false)
     return (
         <>
             <div className="query-page-outer">
-                <div className="form-layouts py-5 query-page">
+                <div className="form-layouts pt-0 pt-md-5 pb-5 query-page">
                     <Container>
                         <Row>
                             <Col md={12} className="position-relative">
-                                <div className="forms py-4">
+                                <div className="forms pt-0 pt-md-4 pb-4">
                                     <h1 className="py-5">Ready to get your <br />baller matched?</h1>
                                 </div>
                                 <div className="lets-find mx-auto d-flex justify-content-center py-5 align-items-center position-absolute">
@@ -115,7 +117,7 @@ export default function QueryForm() {
                                                 </Form.Group>
                                             </Col>
                                             {/* Modal */}
-                                            <TeamNotPresentModal modalShow={teamNotPresentModal} />
+                                            <TeamNotPresentModal modalShow={teamNotPresentModal} onHide={() => setTeamNotPresentModal(!teamNotPresentModal)} />
                                             {/*  */}
                                             <Button variant="primary" type="submit" className="form-btn mt-4" onClick={(e) => { e.preventDefault(); setTeamNotPresentModal(!teamNotPresentModal) }}>
                                                 Let’s Go

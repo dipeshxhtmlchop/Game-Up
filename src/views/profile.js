@@ -6,14 +6,16 @@ import playerThree from '../assets/images/travel-teams/player3.png'
 import founderImage from '../assets/images/about-cards/founder.png'
 import AddCardImg from '../assets/images/about-cards/add-card.png'
 import Cards from '../components/cards'
-import PlayersIcon from '../assets/images/icons/players-icon.png'
-import RecommendationIcon from '../assets/images/icons/recommendation-icon.png'
-import LocationIcon from '../assets/images/icons/location-icon.png'
+import PlayersIcon from '../assets/images/icons/players-icon.svg'
+import RecommendationIcon from '../assets/images/icons/recommendation-icon.svg'
+import LocationIcon from '../assets/images/icons/location-icon.svg'
 import ResultsSlider from "../components/resultsSlider";
 import MakeRecommendationModal from "../components/makeRecommendationModal";
+import { tabTitle } from "../components/tabsTitle";
 
 
 export default function QueryForm() {
+    tabTitle('User Profile')
     const cardsData = [
         {
             title: 'Team Name',
@@ -78,7 +80,7 @@ export default function QueryForm() {
     const [modalRecommendation, setModalRecommendation] = useState(false)
     return (
         <>
-            <div className="form-layouts py-5 results-page">
+            <div className="form-layouts pt-0 pt-md-5 pb-5 results-page">
                 <Container className="py-1">
                     <Row className="profile-banner-section align-items-center py-5">
                         <Col xs={12} md={2} className="me-md-0 me-0">

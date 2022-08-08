@@ -39,7 +39,7 @@ export default function MakeRecommendationModal(props) {
                                                     <Form.Label>I’d like to make a:</Form.Label>
                                                     <Form className="radio-outer">
                                                         {['radio'].map((type) => (
-                                                            <div key={`default-${type}`} className="mb-3">
+                                                            <div key={`default-${type}`} className="mb-3 flex-md-row flex-column">
                                                                 <Form.Check
                                                                     type={type}
                                                                     id={`default-${type}`}

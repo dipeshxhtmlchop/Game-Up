@@ -12,6 +12,12 @@
         width: 100%;
         line-height: 1.7;
     }
+    .navbar {
+        .logo {
+            max-width: 200px;
+            width: 100%;
+        }
+    }
     .navbar-nav {
         a {
             font-size: 15px;
@@ -199,9 +205,7 @@
         }
     }
     .login-page, .form-layouts {
-        background-image: url(../images/forms/login-bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: linear-gradient(305.75deg, #DB7200 22.29%, rgba(255, 148, 32, 0.87) 71.25%);
         &.query-page {
             @media(max-width: 991px) {
                 background: none;
@@ -284,8 +288,7 @@
         }
     }
     .registration-page {
-        background-image: url(../images/forms/registration-bg.png) !important;
-        height: auto !important;
+        background: linear-gradient(305.75deg, #DB7200 22.29%, rgba(255, 148, 32, 0.87) 71.25%);
     }
     .query-page-form {
         background: none !important;
@@ -438,7 +441,7 @@
             }
             &.player-dash-search {
                 @media(max-width: 767px) {
-                    bottom: -250px;
+                    bottom: -170px;
                 }
             }
             &.player-dash-search {
@@ -454,8 +457,7 @@
         }
     }
     .results-page {
-        background-image: url(../images/backgrounds/results-bg.png);
-        background-size: cover;
+        background: linear-gradient(305.75deg, #DB7200 22.29%, rgba(255, 148, 32, 0.87) 71.25%);
     }
     .results-page-description {
         h2 {
@@ -500,6 +502,7 @@
             box-shadow: none;
             border: 1px solid #D9D9D6;
             border-radius: 20px;
+            cursor: pointer;
             img {
                 max-width: 105px;
                 width: 100%;
@@ -588,9 +591,7 @@
         }
     }
     .about-page-banner {
-        background-image: url(../images/backgrounds/about-us-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background: linear-gradient(305.75deg, #DB7200 22.29%, rgba(255, 148, 32, 0.87) 71.25%);
     }
     .about-us-description {
         max-width: 860px;
@@ -880,7 +881,7 @@
             border: 0;
         }
         .navbar-toggler-icon {
-            background-image: url(../images/icons/nav-bars-icon.png);
+            background-image: url(../images/icons/nav-bars-icon.svg);
             background-size: 20px;
        }
         .nav-active-custom {
@@ -894,7 +895,7 @@
             right: 0;
             padding-top: 16px;
             .navbar-toggler-icon {
-                background-image: url(../images/icons/cross-icon.png);
+                background-image: url(../images/icons/cross-icon.svg);
             }
             .navbar-nav {
                 padding-top: 50%;
@@ -917,9 +918,7 @@
         }
         .query-page-outer {
             @media(max-width: 991px) {
-                background-image: url(../images/backgrounds/query-bg-sm.png);
-                background-repeat: no-repeat;
-                background-size: cover;
+                background: linear-gradient(305.75deg, #DB7200 22.29%, rgba(255, 148, 32, 0.87) 71.25%);
             }
             .form-inputs {
                 @media(max-width: 767px) {
@@ -1025,12 +1024,14 @@
 .make-recommendation-modal {
     max-width: 1000px;
     width: 100%;
-    background: #F0F2F5;
-    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
-    border-radius: 10px;
-    margin: 0 auto;
-    text-align: left;
     font-family: 'poppins';
+    .modal-content {
+        background: #F0F2F5;
+        box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        margin: 0 auto;
+        text-align: left;
+    }
     .form-inputs {
         max-width: 420px;
         width: 100%;
@@ -1175,11 +1176,25 @@
         line-height: 54px;
         letter-spacing: 0.07em;
         color: #231F20;
+        @media(max-width: 767px) {
+            font-size: 26px;
+            line-height: 34px;
+        }
     }
     .btn-close {
         display: none;
     }
     .modal-header {
         border: none;
+    }
+}
+.modal {
+    @media(max-width: 575px) {
+        padding: 10px !important;
+    }
+    .modal-dialog {
+        @media(max-width: 575px) {
+            margin: 0 auto;
+        }
     }
 }

@@ -1,8 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import SlickSlider from "../components/slider";
+import { tabTitle } from "../components/tabsTitle";
 
 export default function IndexPage() {
+    tabTitle('Home')
     return (
         <>
             <div className="homepage-banner">
