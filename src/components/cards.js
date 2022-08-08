@@ -15,7 +15,7 @@ export default function Cards(props) {
                 cardTitleModal={props.cardTitle}
                 cardType={props.cardType}
             />
-            <Card className="cards-layout" onClick={handleModal}>
+            <Card className={props.imageAlignment ? `cards-layout ${props.imageAlignment}` : 'cards-layout'} onClick={handleModal}>
                 <Card.Title><img src={props.cardImage} alt="cards_img" /></Card.Title>
                 <Card.Body>
                     <h6>{props.cardTitle}</h6>

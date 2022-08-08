@@ -14,15 +14,15 @@ export default function PlayerDash() {
     tabTitle('Player Dashboard')
     const cardsData = [
         {
-            title: 'Team Name',
+            title: 'Tryout',
             image: Ball
         },
         {
-            title: 'ghfhhnfghnb',
+            title: 'Tournament',
             image: Cup
         },
         {
-            title: 'ghfhhnfghnb',
+            title: 'Court Availability',
             image: Court
         }
     ];
@@ -77,7 +77,7 @@ export default function PlayerDash() {
                             <h2 className="text-center text-lg-start">for you this week</h2>
                         </Col>
                         <Col md={12} className="slider-cards">
-                            <ResultsSlider cardsData={cardsData} />
+                            <ResultsSlider cardsData={cardsData} imageAlignment="static" />
                         </Col>
                     </Row>
                 </Container>

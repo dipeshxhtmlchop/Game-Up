@@ -65,7 +65,7 @@ export default function ResultsSlider(props) {
         {props.cardsData.map((items, idx) => {
           return (
             <div className="slider-cards" key={idx}>
-              <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} cardType={props.cardType} />
+              <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} cardType={props.cardType} imageAlignment={props.imageAlignment}/>
             </div>
           )
         })}
