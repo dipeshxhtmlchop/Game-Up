@@ -20,7 +20,7 @@ export default function About() {
                     </Row>
                 </Container>
             </div>
-            <div className="py-5 my-5">
+            <div className="py-5 mb-5 mt-0 mt-md-5">
                 <Container>
                     <Row>
                         <Col className="about-us-description">

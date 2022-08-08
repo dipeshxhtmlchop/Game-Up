@@ -86,7 +86,7 @@ export default function QueryForm() {
                     </Row>
                 </Container>
             </div>
-            <div className="py-5 my-5">
+            <div className="pt-5 my-5">
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative">

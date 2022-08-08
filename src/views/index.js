@@ -20,7 +20,7 @@ export default function IndexPage() {
                 </Container>
             </div>
             <Container>
-                <Row>
+                <Row className="pb-md-0 pb-5">
                     <Col md={12} className="pb-5 mb-5 pt-md-0 pt-5">
                         <SlickSlider />
                     </Col>

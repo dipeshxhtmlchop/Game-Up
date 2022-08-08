@@ -133,7 +133,7 @@ export default function QueryForm() {
                 </Container>
             </div>
 
-            <div className="py-5 my-5 profile-cards d-lg-none d-block profile-mobile-slider">
+            <div className="py-5 mt-5 mb-0 mb-md-5 profile-cards d-lg-none d-block profile-mobile-slider">
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative heading-with-icons">
@@ -187,7 +187,7 @@ export default function QueryForm() {
                 </Container>
             </div>
 
-            <div className="py-5 my-5 profile-cards d-lg-none d-block profile-mobile-slider">
+            <div className="py-5 mb-5 mt-0 mt-md-5 profile-cards d-lg-none d-block profile-mobile-slider">
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative heading-with-icons">

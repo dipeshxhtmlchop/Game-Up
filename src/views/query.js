@@ -20,7 +20,7 @@ export default function QueryForm() {
                                 </div>
                                 <div className="lets-find mx-auto d-flex justify-content-center py-5 align-items-center position-absolute">
                                     <p className="d-inline-block m-0 me-2">Let’s find a</p>
-                                    <Form.Select aria-label="Default select example" className="text-uppercase ms-2">
+                                    <Form.Select aria-label="Default select example" className="text-center ms-0 ms-md-2 mt-3 mt-md-0">
                                         <option>Team</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -59,7 +59,7 @@ export default function QueryForm() {
                                             <Col md={6}>
                                                 <Form.Group className="mb-3 px-1" controlId="formBasicPassword">
                                                     <Form.Label>Radius</Form.Label>
-                                                    <Form.Select aria-label="Default select example" className="text-uppercase">
+                                                    <Form.Select aria-label="Default select example" className="text-capitalize">
                                                         <option>select</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -70,7 +70,7 @@ export default function QueryForm() {
                                             <Col md={6}>
                                                 <Form.Group className="mb-3 px-1" controlId="formBasicPassword">
                                                     <Form.Label>Skill Level</Form.Label>
-                                                    <Form.Select aria-label="Default select example" className="text-uppercase">
+                                                    <Form.Select aria-label="Default select example" className="text-capitalize">
                                                         <option>select</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -81,8 +81,8 @@ export default function QueryForm() {
                                             <Col md={6}>
                                                 <Form.Group className="mb-3 px-1" controlId="formBasicPassword">
                                                     <Form.Label>Goals (check all that apply)</Form.Label>
-                                                    <Form.Select aria-label="Default select example" className="text-uppercase">
-                                                        <option>-</option>
+                                                    <Form.Select aria-label="Default select example" className="text-capitalize">
+                                                        <option>select</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
                                                         <option value="3">Three</option>

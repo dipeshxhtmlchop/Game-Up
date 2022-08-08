@@ -16,8 +16,8 @@ export default function LoginPage() {
                                     <Row className="form-inputs mx-auto py-5">
                                         <Col md={12}>
                                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                                                <Form.Label className="pt-2">Email address</Form.Label>
-                                                <Form.Control type="email" placeholder="Enter email" />
+                                                <Form.Label className="pt-2">Username</Form.Label>
+                                                <Form.Control type="email" placeholder="Username" />
                                             </Form.Group>
                                         </Col>
                                         <Col md={12}>

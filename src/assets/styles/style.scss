@@ -53,6 +53,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         padding: 200px 0;
+        @media(max-width: 767px) {
+            padding: 150px 0 75px;
+        }
         h1 {
             font-weight: 800;
             font-size: 85px;
@@ -250,6 +253,9 @@
                     outline: none;
                     box-shadow: none;
                     height: 50px;
+                    &:focus {
+                        border: 2px solid #FF8E15;
+                    }
                 }
                 select {
                     border: 1px solid #D9D9D6;
@@ -257,6 +263,10 @@
                     outline: none;
                     box-shadow: none;
                     height: 50px;
+                    cursor: pointer;
+                    &:focus {
+                        border: 2px solid #FF8E15;
+                    }
                 }
                 a {
                     font-weight: 700;
