@@ -73,7 +73,7 @@ export default function PlayerDash() {
                 <Container>
                     <Row className="mt-md-0 mt-5 pt-md-0 pt-5">
                         <Col md={12} className="results-page-description position-relative heading-with-icons mt-md-0 mt-1 pt-md-0 pt-1">
-                            <img src={ForYouIcon} alt="ForYouIcon" />
+                            <img className="pb-3" src={ForYouIcon} alt="ForYouIcon" />
                             <h2 className="text-center text-lg-start">for you this week</h2>
                         </Col>
                         <Col md={12} className="slider-cards">
@@ -97,18 +97,18 @@ export default function PlayerDash() {
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative heading-with-icons">
-                            <img src={BadgesIcon} alt="BadgesIcon" />
+                            <img className="pb-3 pb-lg-0" src={BadgesIcon} alt="BadgesIcon" />
                             <h2 className="text-center text-lg-start">Badges & Awards</h2>
                         </Col>
                         <Col md={12} className="py-3">
                             <h2 className="text-center no-badge py-5">No badges or awards have been added.</h2>
                         </Col>
                         <Col md={12} className="results-page-description position-relative pt-1 pt-md-5 heading-with-icons">
-                            <img src={CurrentInfoIcon} alt="CurrentInfoIcon" className="current-info-icon" />
+                            <img src={CurrentInfoIcon} alt="CurrentInfoIcon" className="current-info-icon pb-3 pb-lg-0" />
                             <h2 className="text-center text-lg-start">Current info</h2>
                         </Col>
                         <Col md={12} className="current-info py-3">
-                            <h2 className="text-start py-5 ps-2 ps-md-0">This is a description...</h2>
+                            <h2 className="text-start py-5 ps-4 ps-md-0">This is a description...</h2>
                         </Col>
                     </Row>
                 </Container>

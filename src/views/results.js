@@ -1,10 +1,12 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import ResultsSlider from '../components/resultsSlider'
 import playerOne from '../assets/images/travel-teams/player1.png'
 import playerTwo from '../assets/images/travel-teams/player2.png'
 import playerThree from '../assets/images/travel-teams/player3.png'
 import { tabTitle } from "../components/tabsTitle";
+import { Link } from "react-router-dom";
+import FilterCross from '../assets/images/icons/filter-cross.svg'
 
 export default function QueryForm() {
     tabTitle('Results')
@@ -86,6 +88,31 @@ export default function QueryForm() {
                     </Row>
                 </Container>
             </div>
+            <Container>
+                <Row>
+                    <Col md={12} className="position-relative pt-5 mt-4">
+                        <div className="d-flex justify-content-between filter-bar-controls ps-md-4">
+                            <Link to="#" className="text-uppercase position-relative">edit search</Link>
+                            <Button className="text-uppercase position-relative">Save this search</Button>
+                        </div>
+                        <div className="filters-section mt-2 d-flex align-items-center">
+                            <h2 className="mb-0 me-lg-4 me-0 position-relative">Filters</h2>
+                            <span className="filter-select-val">Male<Badge bg="" className="pe-0">
+                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
+                            </span>
+                            <span className="filter-select-val">10 years old<Badge bg="" className="pe-0">
+                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
+                            </span>
+                            <span className="filter-select-val">Beginner<Badge bg="" className="pe-0">
+                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
+                            </span>
+                            <span className="filter-select-val">Joining AAU Travel Team<Badge bg="" className="pe-0">
+                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
+                            </span>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
             <div className="pt-5 my-5">
                 <Container>
                     <Row>

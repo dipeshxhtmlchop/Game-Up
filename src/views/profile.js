@@ -137,7 +137,7 @@ export default function QueryForm() {
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative heading-with-icons">
-                            <img src={PlayersIcon} alt="PlayersIcon" />
+                            <img className="pb-3 pb-lg-0" src={PlayersIcon} alt="PlayersIcon" />
                             <h2 className="text-center text-lg-start">Players</h2>
                         </Col>
                         <Col md={12} className="slider-cards">
@@ -191,7 +191,7 @@ export default function QueryForm() {
                 <Container>
                     <Row>
                         <Col md={12} className="results-page-description position-relative heading-with-icons">
-                            <img src={RecommendationIcon} alt="RecommendationIcon" />
+                            <img className="pb-3 pb-lg-0" src={RecommendationIcon} alt="RecommendationIcon" />
                             <h2 className="text-center text-lg-start">recommendations</h2>
                         </Col>
                         <Col md={12} className="results-page-description position-relative">
