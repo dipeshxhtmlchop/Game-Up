@@ -37,7 +37,7 @@ export default function PlayerDash() {
                             </div>
                             <div className="lets-find mx-auto d-flex justify-content-center py-5 align-items-center position-absolute player-dash-search">
                                 <p className="d-inline-block m-0 me-lg-2 me-0">I want to search for a:</p>
-                                <Form.Select aria-label="Default select example" className="text-center ms-2">
+                                <Form.Select aria-label="Default select example" className="text-center">
                                     <option>Player</option>
                                     <option value="1">One</option>
                                     <option value="2">Two</option>
