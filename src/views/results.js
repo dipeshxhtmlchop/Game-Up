@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Badge } from "react-bootstrap";
+import { Container, Row, Col, Button, Badge, Dropdown, DropdownButton } from "react-bootstrap";
 import ResultsSlider from '../components/resultsSlider'
 import playerOne from '../assets/images/travel-teams/player1.png'
 import playerTwo from '../assets/images/travel-teams/player2.png'
@@ -96,7 +96,11 @@ export default function QueryForm() {
                             <Button className="text-uppercase position-relative">Save this search</Button>
                         </div>
                         <div className="filters-section mt-2 d-flex align-items-center">
-                            <h2 className="mb-0 me-lg-4 me-0 position-relative">Filters</h2>
+                            <DropdownButton id="dropdown-basic-button" title="Filters" className="pe-lg-4 pe-0">
+                                <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
+                                <Dropdown.Item href="#/action-2">10 years old</Dropdown.Item>
+                                <Dropdown.Item href="#/action-3">Beginner</Dropdown.Item>
+                            </DropdownButton>
                             <span className="filter-select-val">Male<Badge bg="" className="pe-0">
                                 <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
                             </span>
