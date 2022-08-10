@@ -117,7 +117,7 @@ export default function QueryForm() {
                         {cardsData.map((items, idx) => {
                             return (
                                 <Col md={3} className="slider-cards" key={idx}>
-                                    <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} />
+                                    <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} noModal="noModal" />
                                 </Col>
                             )
                         })}
@@ -160,7 +160,7 @@ export default function QueryForm() {
                         {cardsData2.map((items, idx) => {
                             return (
                                 <Col md={3} className="slider-cards" key={idx}>
-                                    <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} />
+                                    <Cards cardTitle={items.title} cardSubTitle={items.sub_title} cardImage={items.image} noModal="noModal" />
                                 </Col>
                             )
                         })}

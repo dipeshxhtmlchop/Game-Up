@@ -92,7 +92,7 @@ export default function QueryForm() {
                 <Row>
                     <Col md={12} className="position-relative pt-5 mt-4">
                         <div className="d-flex justify-content-between filter-bar-controls ps-md-4">
-                            <Link to="#" className="text-uppercase position-relative">edit search</Link>
+                            <Link to="/query" className="text-uppercase position-relative">edit search</Link>
                             <Button className="text-uppercase position-relative">Save this search</Button>
                         </div>
                         <div className="filters-section mt-2 d-flex align-items-center">

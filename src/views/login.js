@@ -1,4 +1,4 @@
-import { Container, Button, Form, Row, Col } from "react-bootstrap";
+import { Container, Form, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { tabTitle } from "../components/tabsTitle";
 
@@ -32,17 +32,13 @@ export default function LoginPage() {
                                             </Form.Group>
                                         </Col>
                                         <Col md={12}>
-                                            <Button variant="primary" type="submit" className="form-btn">
-                                                Let’s Go
-                                            </Button>
-                                        </Col>  
+                                            <Link to="/profile" className="form-btn btn btn-primary text-decoration-none text-white">Let’s Go</Link>
+                                        </Col>
                                     </Row>
                                     <hr></hr>
                                     <div className="form-inputs mx-auto pt-4 pb-5 text-center register-section px-2">
                                         <h2>New to Gameup?</h2>
-                                        <Button variant="primary" type="submit" className="form-btn register-btn my-3 mx-md-auto">
-                                            Register for a new account
-                                        </Button>
+                                        <Link to="/joingame" className="form-btn btn btn-primary text-decoration-none text-white register-btn my-3 mx-md-auto">Register for a new account</Link>
                                     </div>
                                 </Form>
                             </div>

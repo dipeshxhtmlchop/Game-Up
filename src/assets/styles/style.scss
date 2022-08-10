@@ -11,6 +11,7 @@
         max-width: 200px;
         width: 100%;
         line-height: 1.7;
+        box-shadow: none !important;
     }
     .navbar {
         .logo {
@@ -295,7 +296,7 @@
                     text-align: center;
                     letter-spacing: 0.045em;
                     text-transform: uppercase;
-                    height: 50px;
+                    padding: 12.5px 0.75rem;
                     &.register-btn {
                         background-color: #000;
                     }
@@ -395,6 +396,8 @@
             }
         }
         .select-plan-section {
+            border: 2px solid #ffffff00;
+            cursor: pointer;
             &.plan-cards {
                 background: #FFFFFF;
                 border-radius: 16px;
@@ -1067,6 +1070,11 @@
             color: #231F20;
             padding: 7px 14px;
             user-select: none;
+        }
+    }
+    .activePlan {
+        .select-plan-section {
+            border: 2px solid #FF8E15;
         }
     }
 }

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import Card from 'react-bootstrap/Card';
 import TravelTeamsModal from "./travelTeamModal";
+import { useNavigate } from 'react-router-dom'
 
 export default function Cards(props) {
+    const navigate = useNavigate();
     const [modalHandle, setModalHandle] = useState(false)
     const handleModal = () => {
-        setModalHandle(!modalHandle)
+        if (props.noModal !== 'noModal') {
+            setModalHandle(!modalHandle)
+        } else {
+            navigate(`/player-dash`);
+        }
     }
     return (
         <>
@@ -27,3 +33,4 @@ export default function Cards(props) {
         </>
     )
 }
+

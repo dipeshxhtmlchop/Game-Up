@@ -1,9 +1,17 @@
+import { useEffect, useState } from "react";
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import PremiumIcon from '../assets/images/icons/premium-icon.svg'
 import { tabTitle } from "../components/tabsTitle";
 
 export default function JoinGame() {
     tabTitle('Registration')
+    const [activePlan, setActivePlan] = useState('')
+    const planSelect = (e) => {
+        setActivePlan(e)
+    }
+    useEffect(() => {
+        console.log('activePlan-=-=--=-=-=-=', activePlan)
+    }, [activePlan])
     return (
         <>
             <div className="registration-page pb-5 form-layouts">
@@ -75,7 +83,7 @@ export default function JoinGame() {
                                         <Col md={12} className="select-plan-section">
                                             <h3 className="text-center py-4">Select your plan:</h3>
                                         </Col>
-                                        <Col md={6} sm={12} className="mb-3 px-md-4 px-4 select-plans">
+                                        <Col md={6} sm={12} className={`mb-3 px-md-4 px-4 select-plans ${activePlan === 'Standard' ? 'activePlan' : '' }`} onClick={() => planSelect('Standard')}>
                                             <div className="select-plan-section plan-cards py-5 px-4">
                                                 <h2 className="text-center">Standard</h2>
                                                 <hr></hr>
@@ -85,9 +93,10 @@ export default function JoinGame() {
                                                 </ul>
                                             </div>
                                         </Col>
-                                        <Col md={6} sm={12} className="mb-3 px-md-4 px-4 select-plans">
+                                        <Col md={6} sm={12} className={`mb-3 px-md-4 px-4 select-plans ${activePlan === 'Premium' ? 'activePlan' : '' }`} onClick={() => planSelect('Premium')}>
                                             <div className="select-plan-section plan-cards py-5 px-4">
-                                                <h2 className="text-center"><img src={PremiumIcon} alt="PremiumIcon" className="me-2 mb-2" style={{ maxWidth: '20px', width: '100%' }} />Premium</h2>
+                                                <h2 className="text-center"><img src={PremiumIcon} alt="PremiumIcon" className="me-2 mb-2" 
+                                                style={{ maxWidth: '20px', width: '100%' }} />Premium</h2>
                                                 <hr></hr>
                                                 <ul>
                                                     <li>Benefit</li>

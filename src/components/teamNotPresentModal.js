@@ -1,6 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
 import { Container, Col, Row, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 
 export default function TeamNotPresentModal(props) {
     return (
@@ -77,7 +78,8 @@ export default function TeamNotPresentModal(props) {
                                                     />
                                                 </Form.Group>
                                             </Col>
-                                            <Button variant="primary" type="submit" className="form-btn mt-4">
+                                            <Link to="/results" className="text-uppercase position-relative mt-4">skip this step</Link>
+                                            <Button variant="primary" type="submit" className="form-btn mt-2">
                                                 Submit
                                             </Button>
                                         </Row>
