@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Container, Button, Form, Row, Col } from "react-bootstrap";
 import PremiumIcon from '../assets/images/icons/premium-icon.svg'
 import { tabTitle } from "../components/tabsTitle";
@@ -9,9 +9,6 @@ export default function JoinGame() {
     const planSelect = (e) => {
         setActivePlan(e)
     }
-    useEffect(() => {
-        console.log('activePlan-=-=--=-=-=-=', activePlan)
-    }, [activePlan])
     return (
         <>
             <div className="registration-page pb-5 form-layouts">

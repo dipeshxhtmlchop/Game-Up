@@ -1,9 +1,9 @@
 /* eslint-disable no-useless-concat */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from '../assets/images/logo.png';
 
 export default function Header() {
@@ -16,6 +16,10 @@ export default function Header() {
             document.getElementsByClassName('navbar-toggler')[0].click();
         }
     }
+    let location = useLocation()
+    useEffect(() => {
+        console.log(location.pathname)
+    }, [location])
     return (
         <>
             <div>
@@ -31,7 +35,12 @@ export default function Header() {
                                     <Link to="/about">About Us</Link>
                                 </div>
                                 <div className='login-signup'>
-                                    <Link to="/login" className='login-btn px-md-5 px-3 py-2'>log in</Link>
+                                    <Link to="/login" className='login-btn px-md-5 px-3 py-2'>{location.pathname === '/query' ? 'Log Out'
+                                        : location.pathname === '/results' ? 'Log Out'
+                                            : location.pathname === '/profile' ? 'Log Out'
+                                                : location.pathname === '/player-dash' ? 'Log Out'
+                                                    : 'log in'}
+                                    </Link>
                                     <Link to="/joingame" className='joingame-btn px-md-5 px-3 py-2 ms-3'>Join Gameup</Link>
                                 </div>
                             </Nav>
