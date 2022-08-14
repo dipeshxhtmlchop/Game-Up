@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button, Badge, Dropdown, DropdownButton } from "react-bootstrap";
 import ResultsSlider from '../components/resultsSlider'
 import playerOne from '../assets/images/travel-teams/player1.png'
@@ -74,6 +74,24 @@ export default function QueryForm() {
             image: playerOne
         }
     ];
+    const filterValues = [
+        {
+            label: 'Male'
+        },
+        {
+            label: '10 years old'
+        },
+        {
+            label: 'Beginner'
+        },
+        {
+            label: 'Joining AAU Travel Team'
+        }
+    ];
+    const [filterItems, setFilterItems] = useState(filterValues);
+    const removeFilterVal = (key) => {
+        setFilterItems(filterItems => filterItems.filter((item, index) => key !== index))
+    }
     return (
         <>
             <div className="form-layouts py-5 results-page">
@@ -101,18 +119,11 @@ export default function QueryForm() {
                                 <Dropdown.Item href="#/action-2">10 years old</Dropdown.Item>
                                 <Dropdown.Item href="#/action-3">Beginner</Dropdown.Item>
                             </DropdownButton>
-                            <span className="filter-select-val">Male<Badge bg="" className="pe-0">
-                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
-                            </span>
-                            <span className="filter-select-val">10 years old<Badge bg="" className="pe-0">
-                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
-                            </span>
-                            <span className="filter-select-val">Beginner<Badge bg="" className="pe-0">
-                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
-                            </span>
-                            <span className="filter-select-val">Joining AAU Travel Team<Badge bg="" className="pe-0">
-                                <img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
-                            </span>
+                            {filterItems.map((item, idx) => {
+                                return <span className="filter-select-val" key={idx}>
+                                    {item.label}<Badge bg="" className="pe-0" style={{ cursor: 'pointer' }} onClick={() => removeFilterVal(idx)}><img className="pb-1" src={FilterCross} alt="FilterCross" /></Badge>
+                                </span>
+                            })}
                         </div>
                     </Col>
                 </Row>
